@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Semver;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -41,17 +42,35 @@ namespace AuroraLoader.Mods
         // Helper props
         [JsonIgnore]
         public ModVersion LatestVersion => Downloads.OrderByDescending(v => v.Version).FirstOrDefault();
-        public ModVersion LatestVersionCompatibleWith(AuroraVersion auroraVersion) => Downloads.OrderByDescending(v => v.Version)
-            .Where(v => auroraVersion.CompatibleWith(v.TargetAuroraVersion))
-            .FirstOrDefault();
+        public ModVersion LatestVersionCompatibleWith(AuroraVersion auroraVersion)
+        {
+            if (Name == "AuroraLoader") //Always load the most recent AuroraLoader as it's version agnostic.
+            {
+                return Downloads.OrderByDescending(v => v.Version).FirstOrDefault();
+            }
+            else
+            {
+                return Downloads.OrderByDescending(v => v.Version)
+                                .Where(v => auroraVersion.CompatibleWith(v.TargetAuroraVersion))
+                                .FirstOrDefault();
+            }
+        }
 
         [JsonIgnore]
         public ModVersion LatestInstalledVersion => Downloads.OrderByDescending(v => v.Version)
-            .Where(v => v.Downloaded)
-            .FirstOrDefault();
-        public ModVersion LatestInstalledVersionCompatibleWith(AuroraVersion auroraVersion) => Downloads.OrderByDescending(v => v.Version)
+                                                             .Where(v => v.Downloaded)
+                                                             .FirstOrDefault();
+
+        public ModVersion LatestInstalledVersionCompatibleWith(AuroraVersion auroraVersion)
+        {
+            if(Name == "AuroraLoader") //Always load the most recent AuroraLoader as it's version agnostic.
+            {
+                return Downloads.OrderByDescending(v => v.Version).FirstOrDefault();
+            }
+            return Downloads.OrderByDescending(v => v.Version)
             .Where(v => v.Downloaded && auroraVersion.CompatibleWith(v.TargetAuroraVersion))
             .FirstOrDefault();
+        }
 
         public bool Installed => LatestInstalledVersion != null;
         public bool CanBeUpdated(AuroraVersion auroraVersion) => LatestVersion != null

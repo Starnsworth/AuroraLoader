@@ -59,7 +59,7 @@ namespace AuroraLoader.Registry
 
             foreach (var mod in mods.ToList())
             {
-                mod.Downloads.RemoveAll(d => !version.CompatibleWith(d.TargetAuroraVersion));
+                mod.Downloads.RemoveAll(d => !version.CompatibleWith(d.TargetAuroraVersion) && d.Mod.Name != "AuroraLoader"); //Always load AuroraLoader as it's version agnostic.
                 if (mod.Downloads.Count == 0)
                 {
                     mods.Remove(mod);
