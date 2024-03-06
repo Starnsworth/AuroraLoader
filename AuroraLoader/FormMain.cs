@@ -22,16 +22,18 @@ namespace AuroraLoader
         private readonly IConfiguration _configuration;
         private readonly AuroraVersionRegistry _auroraVersionRegistry;
         private readonly ModRegistry _modRegistry;
+        //private readonly AuroraResourcesRegistry _auroraResourcesRegistry;
 
         private FormModDownload _modManagementWindow;
         private FormSaves _saveManagementWindow;
 
-        public FormMain(IConfiguration configuration, AuroraVersionRegistry auroraVersionRegistry, ModRegistry modRegistry)
+        public FormMain(IConfiguration configuration, AuroraVersionRegistry auroraVersionRegistry, ModRegistry modRegistry/*, AuroraResourcesRegistry auroraResourcesRegistry*/)
         {
             InitializeComponent();
             _configuration = configuration;
             _auroraVersionRegistry = auroraVersionRegistry;
             _modRegistry = modRegistry;
+            //_auroraResourcesRegistry = auroraResourcesRegistry;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace AuroraLoader
 
             // Only check mirrors for new versions at app startup
             _auroraVersionRegistry.Update(_modRegistry.Mirrors);
+            //_auroraResourcesRegistry.Update(_modRegistry.Mirrors);
             auroraInstallation = new AuroraInstallation(_auroraVersionRegistry.CurrentAuroraVersion, Path.Combine(Program.AuroraLoaderExecutableDirectory, "Clean"));
 
             _modRegistry.Update(_auroraVersionRegistry.CurrentAuroraVersion, true);

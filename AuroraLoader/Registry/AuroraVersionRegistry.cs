@@ -12,6 +12,9 @@ namespace AuroraLoader.Registry
     /// <summary>
     /// Must be initialized by calling Update()
     /// </summary>
+    /// 
+
+
     public class AuroraVersionRegistry
     {
         public List<AuroraVersion> AuroraVersions { get; private set; } = new List<AuroraVersion>();
@@ -42,7 +45,6 @@ namespace AuroraLoader.Registry
             {
                 UpdateKnownAuroraVersionsFromMirrors(mirrors);
             }
-
             var checksum = GetChecksum(File.ReadAllBytes(Path.Combine(Program.AuroraLoaderExecutableDirectory, "Clean", "aurora.exe")));
             Log.Debug($"Identified checksum {checksum}");
             try
@@ -59,7 +61,6 @@ namespace AuroraLoader.Registry
 
         internal void UpdateKnownVersionsFromCache()
         {
-            Log.Debug($"Loading Aurora versions from {Path.Combine(Program.AuroraLoaderExecutableDirectory, "aurora_versions.ini")}");
             try
             {
                 var rawFileContents = File.ReadAllText(Path.Combine(Program.AuroraLoaderExecutableDirectory, "aurora_versions.ini"));

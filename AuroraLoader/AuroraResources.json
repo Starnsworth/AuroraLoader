@@ -1,0 +1,161 @@
+﻿//Lines starting with '//' are comnments and ignored.
+{
+  "resources": [
+    //User resources for the game. Flags, Medals, Icons, etc.
+    {
+      "name": "Flags",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/Flags.zip"
+    },
+    {
+      "name": "Music",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/Music.zip"
+    },
+    {
+      "name": "Medals",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/Medals.zip"
+    },
+    {
+      "name": "Races",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/Races.zip"
+    },
+    {
+      "name": "ShipIcons",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/ShipIcons.zip"
+    },
+    {
+      "name": "StationIcons",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/StationIcons.zip"
+    }
+  ],
+  "aurora_versions": [
+    //All versions should have a checksum. If it's missing please add it.
+    {
+      "major_version": "1.0.0",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.0.0.zip",
+      "updates": [
+        {
+          "minor_version": "1.8.0",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.8.0.zip"
+        },
+        {
+          "minor_version": "1.9.0",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.9.0.zip",
+          "checksum": "lrpl5w",
+          "patches": [
+            {
+              "patch_version": "1.9.2",
+              "checksum": "ZBYjFm",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.9.2.zip"
+            },
+            {
+              "patch_version": "1.9.3",
+              "checksum": "rTJo4i",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.9.3.zip"
+            },
+            {
+              "patch_version": "1.9.4",
+              "checksum": "rXRqxb",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.9.4.zip"
+            },
+            {
+              "patch_version": "1.9.5",
+              "checksum": "tzIeup",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.9.5.zip"
+            }
+          ]
+        },
+        {
+          "minor_version": "1.10.0",
+          "checksum": "sfnrR7",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.10.0.zip"
+        },
+        {
+          "minor_version": "1.11.0",
+          "checksum": "yBBAST",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.11.0.zip"
+        },
+        {
+          "minor_version": "1.12.0",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-1.12.0.zip"
+        }
+      ]
+    },
+    {
+      "major_version": "2.0.0",
+      "checksum": "KqNIFz",
+      "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.0.0.zip",
+      "patches": [
+        {
+          "patch_version": "2.0.1",
+          "checksum": "KqNIFz",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.0.1.zip"
+        },
+        {
+          "patch_version": "2.0.2",
+          "checksum": "JlajBi",
+          "download_version": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.0.2.zip"
+        },
+        {
+          "patch_version": "2.0.3",
+          "checksum": "rTG4cH",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.0.3.zip"
+        }
+      ],
+      "updates": [
+        {
+          "minor_version": "2.1.0",
+          "checksum": "vN9TNw",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.1.0.zip",
+          "patches": [
+            {
+              "patch_version": "2.1.1",
+              "checksum": "dfu4kn",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.1.1.zip"
+            }
+          ]
+        },
+        {
+          "minor_version": "2.2.0",
+          "checksum": "sYHMYH",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.2.0.zip",
+          "patches": [
+            {
+              "patch_version": "2.2.1",
+              "checksum": "sYHMYH",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.2.1.zip"
+            }
+          ]
+        },
+        {
+          "minor_version": "2.3.0",
+          "checksum": "XAH1s5",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.3.0.zip",
+          "patches": [
+            {
+              "patch_version": "2.3.1",
+              "checksum": "mw9Jjo",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.3.1.zip"
+            }
+          ]
+        },
+        {
+          "minor_version": "2.4.0",
+          "checksum": "QmEE2Q",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.4.0.zip"
+        },
+        {
+          "minor_version": "2.5.0",
+          "checksum": "GoKcbN",
+          "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.5.0.zip",
+          "patches": [
+            {
+              "patch_version": "2.5.1",
+              "checksum": "kWt0gg",
+              "download_url": "https://raw.githubusercontent.com/Aurora-Modders/AuroraMods/master/Aurora/aurora-2.5.1.zip"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

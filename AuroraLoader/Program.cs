@@ -53,8 +53,9 @@ namespace AuroraLoader
                 .Build();
             var auroraVersionRegistry = new AuroraVersionRegistry(configuration);
             var modRegistry = new ModRegistry(configuration);
+            //var auroraResourcesRegistry = new AuroraResourcesRegistry(configuration);
             Log.Debug("Launching main form");
-            Application.Run(new FormMain(configuration, auroraVersionRegistry, modRegistry));
+            Application.Run(new FormMain(configuration, auroraVersionRegistry, modRegistry/*, auroraResourcesRegistry*/));
         }
 
         private static void InstallAurora()
