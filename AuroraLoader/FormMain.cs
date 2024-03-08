@@ -150,6 +150,11 @@ namespace AuroraLoader
             {
                 LabelAuroraVersion.Text = "Aurora version: Unknown";
             }
+            else if (!File.Exists(Path.Combine(auroraInstallation.InstallationPath, "aurora.exe")))
+            {
+                LabelAuroraVersion.Text = "Aurora Not Installed";
+            }
+
             else
             {
                 // Show only the checksum if we can't identify the version of Aurora
@@ -544,5 +549,7 @@ namespace AuroraLoader
                 ButtonSinglePlayer.Enabled = false;
             }
         }
+
+
     }
 }

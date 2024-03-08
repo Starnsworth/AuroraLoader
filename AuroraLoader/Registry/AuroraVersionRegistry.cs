@@ -45,8 +45,15 @@ namespace AuroraLoader.Registry
             {
                 UpdateKnownAuroraVersionsFromMirrors(mirrors);
             }
-            var checksum = GetChecksum(File.ReadAllBytes(Path.Combine(Program.AuroraLoaderExecutableDirectory, "Clean", "aurora.exe")));
-            Log.Debug($"Identified checksum {checksum}");
+            string checksum = ""; //prevents crash if checksum fails for whatever reason
+            try
+            {
+                checksum = GetChecksum(File.ReadAllBytes(Path.Combine(Program.AuroraLoaderExecutableDirectory, "Clean", "aurora.exe")));
+                Log.Debug($"Identified checksum {checksum}");
+            } catch
+            {
+                Log.Debug("Unable to identify checksum.");
+            }
             try
             {
                 CurrentAuroraVersion = AuroraVersions.First(v => v.Checksum.Equals(checksum));

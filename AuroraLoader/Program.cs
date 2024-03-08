@@ -58,7 +58,7 @@ namespace AuroraLoader
             Application.Run(new FormMain(configuration, auroraVersionRegistry, modRegistry/*, auroraResourcesRegistry*/));
         }
 
-        private static void InstallAurora()
+        private static void InstallAurora() //TODO:: Make this take user input. -Starns
         {
             var thread = new Thread(() =>
             {

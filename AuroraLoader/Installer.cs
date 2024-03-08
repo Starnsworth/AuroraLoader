@@ -13,7 +13,7 @@ namespace AuroraLoader
     {
         public static Dictionary<string, string> GetLatestAuroraFiles()
         {
-            // TODO mirrors
+            // TODO:: Use AuroraResources.json to get binary file url based on user input.
             var url = "https://raw.githubusercontent.com/Aurora-Modders/AuroraRegistry/master/aurora_files.ini";
 
             using (var client = new WebClient())
@@ -24,7 +24,7 @@ namespace AuroraLoader
             }
         }
 
-        public static void CopyClean(string folder)
+        public static void CopyClean(string folder) //TODO:: cache most recently played binaries + any downloaded within past 30 days
         {
             var clean = Path.Combine(Program.AuroraLoaderExecutableDirectory, "Clean");
             if (!Directory.Exists(clean))

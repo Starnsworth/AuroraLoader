@@ -1,5 +1,6 @@
 ﻿//Lines starting with '//' are comnments and ignored.
 {
+  //These files can be hosted anywhere and it should be pretty easily patched to allow multiple mirrors.
   "resources": [
     //User resources for the game. Flags, Medals, Icons, etc.
     {
